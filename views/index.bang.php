@@ -13,7 +13,7 @@
 <body>
 	<div class="container">
 		<div class="row">
-			<h1 class="font-weight-light">BangBang, World!</h1>
+			<h1 class="font-weight-light"><?= $ENV['app_name'] ?>, World!</h1>
 		</div>
 		<div class="row">
 			<p class="lead">A micro framework made for humanity...</p>
