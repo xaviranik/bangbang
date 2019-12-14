@@ -11,7 +11,14 @@
 </head>
 
 <body>
-	
+	<div class="container">
+		<div class="row">
+			<h1 class="font-weight-light">BangBang, World!</h1>
+		</div>
+		<div class="row">
+			<p class="lead">A micro framework made for humanity...</p>
+		</div>
+	</div>
 
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
