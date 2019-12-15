@@ -1,11 +1,10 @@
 <?php
 
-require 'core/env.php';
-require 'core/DBHandler.php';
-require 'core/helpers.php';
+$query = require 'core/bootstrap.php';
 
 require 'views/index.bang.php';
 
-//Connect to DB
-$pdo = new DBHandler(ENV::$DB);
-$pdo->connect();
+
+
+//Getting all records from todos table
+$task = $query->selectAll('todos');
