@@ -1,6 +1,9 @@
 <?php
 
-$config = require 'core/config.php';
+$app = [];
+
+$app['config'] = require 'config.php';
+$env = $app['config']['env'];
 
 require 'core/Router.php';
 require 'core/Request.php';
@@ -9,5 +12,5 @@ require 'core/database/QueryBuilder.php';
 require 'core/helpers.php';
 
 //Connect to DB
-$db = new DBHandler($config['database']);
-return new QueryBuilder($db->connect());
+$db = new DBHandler($app['config']['database']);
+$app['database'] = new QueryBuilder($db->connect());
