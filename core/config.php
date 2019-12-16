@@ -1,17 +1,17 @@
 <?php
 
- class ENV {
-    public static $ENV = [
+ return [
+     'env' => [
         'app_name' => 'BangBang',
         'mode' => 'dev',
         'version' => '0.1'
-    ];
+     ],
 
-    public static $DB = [
+    'database' => [
         'driver' => 'mysql',
         'host' => 'localhost',
         'db_name' => 'bangbang_db',
         'username' => 'root',
         'password' => ''
-    ];
- }
+    ]
+ ];

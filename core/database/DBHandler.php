@@ -14,13 +14,13 @@ class DBHandler {
         \PDO::ATTR_EMULATE_PREPARES   => false,
     ];
 
-    public function __construct()
+    public function __construct($config)
     {
-        $this->driver = ENV::$DB['driver'];
-        $this->host = ENV::$DB['host'];
-        $this->db_name = ENV::$DB['db_name'];
-        $this->username = ENV::$DB['username'];
-        $this->password = ENV::$DB['password'];
+        $this->driver = $config['driver'];
+        $this->host = $config['host'];
+        $this->db_name = $config['db_name'];
+        $this->username = $config['username'];
+        $this->password = $config['password'];
     }
 
     public function connect()
