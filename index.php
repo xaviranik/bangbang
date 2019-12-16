@@ -1,9 +1,7 @@
 <?php
 
-$query = require 'core/bootstrap.php';
+$database = require 'core/bootstrap.php';
 
-$route = [
-    '' => 'controllers/index.php',
-    '/about' => 'controllers/about.php',
-    '/contact' => 'controllers/contact.php',
-];
+$uri = trim($_SERVER['REQUEST_URI'], '/');
+
+require Router::load('routes.php')->direct($uri);
