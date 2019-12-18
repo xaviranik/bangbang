@@ -1,10 +1,10 @@
 <?php
 
-$app = [];
+App::bind('config', require 'config.php');
+$env = App::get('config')['env'];
 
-$app['config'] = require 'config.php';
-$env = $app['config']['env'];
 
 //Connect to DB
-$db = new DBHandler($app['config']['database']);
-$app['database'] = new QueryBuilder($db->connect());
+$db = new DBHandler(App::get('config')['database']);
+
+App::bind('database', new QueryBuilder($db->connect()));
