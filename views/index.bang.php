@@ -14,7 +14,7 @@
 	<div class="container">
 		<div class="row mt-4">
 			<div class="col-md-12 text-center">
-				<h1 class="font-weight-light"><?= $env['app_name'] ?>, World!</h1>
+				<h1 class="font-weight-light"><?= "BangBang" ?>, World!</h1>
 				<p class="lead">A micro framework made for humanity...</p>
 			</div>
 		</div>
