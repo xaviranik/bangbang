@@ -8,3 +8,5 @@ $env = App::get('config')['env'];
 $db = new DBHandler(App::get('config')['database']);
 
 App::bind('database', new QueryBuilder($db->connect()));
+
+require "helpers.php";
